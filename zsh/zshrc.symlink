@@ -38,3 +38,4 @@ do
 done
 
 unset config_files
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
