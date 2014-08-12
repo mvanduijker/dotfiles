@@ -19,22 +19,26 @@ brew install pdepend
 brew install phpmd
 brew install php-code-sniffer
 
-curl -s -o ~/bin/phar-composer http://www.lueck.tv/phar-composer/phar-composer.phar
+wget -O ~/bin/phar-composer http://www.lueck.tv/phar-composer/phar-composer.phar > /dev/null 2>&1
 chmod +x ~/bin/phar-composer
 
-curl -s -o ~/bin/psysh http://psysh.org/psysh
+wget -O ~/bin/psysh http://psysh.org/psysh > /dev/null 2>&1
 chmod +x ~/bin/psysh
 
-curl -s -o ~/bin/behat https://cloud.github.com/downloads/Behat/Behat/behat.phar
-chmod +x ~/bin/behat
+wget -O ~/bin/behat.phar https://cloud.github.com/downloads/Behat/Behat/behat.phar > /dev/null 2>&1
+chmod +x ~/bin/behat.phar
+if test ! -L ~/bin/behat
+then
+    ln -s ~/bin/behat.phar ~/bin/behat
+fi
 
-curl -s -o ~/bin/php-cs-fixer http://get.sensiolabs.org/php-cs-fixer.phar
+wget -O ~/bin/php-cs-fixer http://get.sensiolabs.org/php-cs-fixer.phar > /dev/null 2>&1
 chmod +x ~/bin/php-cs-fixer
 
-curl -s -o ~/bin/security-checker http://get.sensiolabs.org/security-checker.phar
+wget -O ~/bin/security-checker http://get.sensiolabs.org/security-checker.phar > /dev/null 2>&1
 chmod +x ~/bin/security-checker
 
-curl -s -o ~/bin/phpmetrics https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
+wget -O ~/bin/phpmetrics https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar > /dev/null 2>&1
 chmod +x ~/bin/phpmetrics
 
 exit 0
