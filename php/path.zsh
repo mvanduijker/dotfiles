@@ -1,0 +1,1 @@
+PATH=$PATH:/Users/mvanduijker/.composer/vendor/bin
