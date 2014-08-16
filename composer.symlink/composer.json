@@ -5,6 +5,7 @@
         "pear/pear_exception": "1.0.*@dev",
         "pear/versioncontrol_svn": "dev-master@dev",
         "pear/versioncontrol_git": "dev-master@dev",
-        "pear/http_request2": "~2.2"
+        "pear/http_request2": "~2.2",
+        "phpunit/phpunit": "~4.2"
     }
 }
