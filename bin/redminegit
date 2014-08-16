@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# redminegit
+#
+# Transform redmine project url to git repository url
+#
+# For linux compatibility of pbpaste and pbcopy check http://whereswalden.com/2009/10/23/pbcopy-and-pbpaste-for-linux/
+#
+
+set -e
+
+# defaults url to first argument
+url=$1
+# when no argument set, try to find it in clipboard
+if [ -z $url ]
+then
+    url="$(pbpaste)"
+fi
+
+# check if url is really an url and is a redmine url (we test on /projects/)
+if [[ $url == https*/projects/* ]]
+then
+    giturl="$(echo $url | sed 's/\(.*\)\/projects\/\([a-z\-]*\).*/\1\/git\/\2/')"
+    # copy git url to pasteboard
+    `echo $giturl | pbcopy`
+    echo "$giturl"
+else
+    echo "No redmine url found as first argument or on clipboard" >&2
+fi
