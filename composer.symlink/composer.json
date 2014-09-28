@@ -6,6 +6,11 @@
         "pear/versioncontrol_svn": "dev-master@dev",
         "pear/versioncontrol_git": "dev-master@dev",
         "pear/http_request2": "~2.2",
-        "phpunit/phpunit": "~4.2"
+        "phpunit/phpunit": "~4.2",
+        "behat/behat": "~3.0",
+        "behat/mink": "~1.5",
+        "behat/symfony2-extension": "~2.0",
+        "behat/mink-goutte-driver": "~1.0",
+        "behat/mink-zombie-driver": "~1.1"
     }
 }
