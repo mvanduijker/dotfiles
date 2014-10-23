@@ -3,6 +3,7 @@ atom.symlink/.storage
 atom.symlink/packages
 atom.symlink/storage
 atom.symlink/themes
+atom.symlink/compile-cache
 composer.symlink/*
 !composer.symlink/composer.json
 git/gitconfig.symlink
