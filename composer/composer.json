@@ -1,0 +1,9 @@
+{    
+    "require": {
+        "squizlabs/php_codesniffer": "*",
+	    "phpmd/phpmd" : "@stable",
+	    "webcreate/conveyor": "dev-master",
+        "psy/psysh": "@stable",
+        "laravel/installer": "^1.3"
+    }
+}

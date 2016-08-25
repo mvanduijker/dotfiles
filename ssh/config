@@ -1,0 +1,5 @@
+ServerAliveInterval 100
+
+Host *.rodjer.nl
+User mark
+IdentityFile ~/.ssh/treehouse_rsa

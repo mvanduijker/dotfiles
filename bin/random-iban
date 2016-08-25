@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+curl -s 'https://www.generateiban.com/test-iban/' | pup '#iban text{}'
