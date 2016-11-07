@@ -1,8 +1,7 @@
 {    
     "require": {
         "squizlabs/php_codesniffer": "*",
-	    "phpmd/phpmd" : "@stable",
-	    "webcreate/conveyor": "dev-master",
+	"phpmd/phpmd" : "@stable",
         "psy/psysh": "@stable",
         "laravel/installer": "^1.3"
     }

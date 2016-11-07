@@ -1,24 +1,25 @@
 - defaults:
     link:
       relink: true
-- clean: ['~']
-- link:
-    ~/.config/fish:
       create: true
-      path: config/fish
+- clean: ['~', '~/.config', '~/.config/fish/conf.d']
+- link:
+    ~/.config/fish/fishfile: config/fish/fishfile
+    ~/.config/fish/conf.d/local.fish: config/fish/conf.d/local.fish
+    ~/.config/fish/conf.d/fish_user_key_bindings.fish: config/fish/conf.d/fish_user_key_bindings.fish
+    ~/.gitconfig: git/gitconfig
     ~/Brewfile: homebrew/Brewfile
     ~/.vimrc: vim/vimrc
-    ~/.ssh/config:
-      create: true
-      path: ssh/config
+    ~/.ssh/config: ssh/config
     ~/.gemrc: ruby/gemrc
+    ~/.composer/composer.json: composer/composer.json         
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [macos/set-defaults.sh, Set MacOS defaults]
   - [sudo softwareupdate -i -a, Updating app store software]
+  - [xcode-select --install || true, Install developer tools]
   - [homebrew/install.sh, Installing homebrew]
   - [brew tap Homebrew/bundle, Installing homebrew bundle]
-  - [brew bundle, Installing homebrew packages from Brewfile]
+  - [brew bundle --file=homebrew/Brewfile, Installing homebrew packages from Brewfile]
   - [composer global update, Updating/installing global PHP dependencies]
-  - [fisher, Install fisherman stuff]
-  - [fisher up, Update fisherman stuff]
+  - [fish/install-fisherman.fish, Install fisherman stuff]
