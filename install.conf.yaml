@@ -4,9 +4,8 @@
       create: true
 - clean: ['~', '~/.config', '~/.config/fish/conf.d']
 - link:
-    ~/.config/fish/fishfile: config/fish/fishfile
     ~/.config/fish/conf.d/local.fish: config/fish/conf.d/local.fish
-    ~/.config/fish/conf.d/fish_user_key_bindings.fish: config/fish/conf.d/fish_user_key_bindings.fish
+    ~/.config/fish/fishfile: config/fish/fishfile
     ~/.gitconfig: git/gitconfig
     ~/Brewfile: homebrew/Brewfile
     ~/.vimrc: vim/vimrc
@@ -22,4 +21,4 @@
   - [brew tap Homebrew/bundle, Installing homebrew bundle]
   - [brew bundle --file=homebrew/Brewfile, Installing homebrew packages from Brewfile]
   - [composer global update, Updating/installing global PHP dependencies]
-  - [fish/install-fisherman.fish, Install fisherman stuff]
+  - [fish/install-fisherman.sh, Install fisherman stuff]

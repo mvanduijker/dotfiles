@@ -7,7 +7,7 @@ set -x PATH $PATH /bin
 set -x PATH $PATH /usr/sbin
 set -x PATH $PATH /sbin
 
-set -x PROJECTS ~/Development
+set -x PROJECTS ~/Code
 
 alias md='mkdir -p'
 alias rd='rmdir'
@@ -35,3 +35,4 @@ alias vup='vagrant up --provision; vagrant ssh'
 alias vrp='vagrant reload --provision'
 alias vssh='vagrant ssh'
 alias vp='vagrant provision'
+
